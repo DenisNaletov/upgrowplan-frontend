@@ -43,7 +43,7 @@ export default function Home() {
         <section className="mb-5">
           <h1 style={{ color: '#1e6078' }}>Создаём бизнес‑планы нового поколения</h1>
           <p style={{ color: '#0785f6', fontWeight: '500' }}>
-            У вас есть идея, и вы хотите превратить её в бизнес? Я помогу вам сделать это грамотно —
+            У вас есть идея, и вы хотите превратить её в бизнес? Команда экспертов поможет вам сделать это грамотно —
             составить профессиональный бизнес‑план, чтобы убедить инвесторов и получить финансирование.
           </p>
           <p>
@@ -58,7 +58,7 @@ export default function Home() {
 
         {/* Блок доверия */}
         <section className="mb-5">
-          <h2 style={{ color: '#1e6078' }}>Я делаю бизнес‑планы. Почему мне стоит доверять?</h2>
+          <h2 style={{ color: '#1e6078' }}>Мы делаем бизнес‑планы. Почему мне стоит доверять?</h2>
           <div className="row g-4 mt-3">
             <div className="col-md-3 col-6">
               <div className="border rounded p-3 h-100 shadow-sm">
@@ -70,7 +70,7 @@ export default function Home() {
             <div className="col-md-3 col-6">
               <div className="border rounded p-3 h-100 shadow-sm">
                 <h5>Многолетняя подтверждённая экспертиза</h5>
-                <p>Фактический опыт аналитической работы более 25 лет</p>
+                <p>Фактический опыт аналитической работы команды более 25 лет</p>
                 <a href="#" className="btn btn-link p-0">Подробнее →</a>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function Home() {
             </div>
             <div className="col-md-3 col-6">
               <div className="border rounded p-3 h-100 shadow-sm">
-                <h5>Высшее экономическое образование</h5>
+                <h5>Высшее экономическое образование членов команды</h5>
                 <p>Экономика и матанализ — наше всё!</p>
                 <a href="#" className="btn btn-link p-0">Подробнее →</a>
               </div>
