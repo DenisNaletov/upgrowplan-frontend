@@ -1,102 +1,109 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
+import { useState } from 'react';
+import ProductsCarousel from '@/components/ProductsCarousel';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  return (
+    <div>
+      {/* Header */}
+      <header>
+        <nav className="navbar navbar-expand-md navbar-light" style={{ backgroundColor: '#d7ecf6' }}>
+          <div className="container">
+            <a className="navbar-brand d-flex align-items-center" href="/">
+              <Image src="/LogoUpGrowSmall2.png" alt="Up&Grow Logo" width={40} height={40} />
+              <span className="ms-2" style={{ color: '#1e6078', fontWeight: 'bold' }}>Up&Grow</span>
+            </a>
+            <button
+              className="navbar-toggler"
+              type="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div className={`collapse navbar-collapse ${menuOpen ? 'show' : ''}`}>
+              <ul className="navbar-nav ms-auto mb-2 mb-md-0">
+                <li className="nav-item"><a className="nav-link" href="/products" style={{ color: '#0785f6' }}>Продукты</a></li>
+                <li className="nav-item"><a className="nav-link" href="#" style={{ color: '#0785f6' }}>Сервисы</a></li>
+                <li className="nav-item"><a className="nav-link" href="#" style={{ color: '#0785f6' }}>Блог</a></li>
+                <li className="nav-item"><a className="nav-link" href="#" style={{ color: '#0785f6' }}>О нас</a></li>
+                <li className="nav-item"><a className="nav-link" href="/contacts" style={{ color: '#0785f6' }}>Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main className="container mt-5">
+        {/* Призыв */}
+        <section className="mb-5">
+          <h1 style={{ color: '#1e6078' }}>Создаём бизнес‑планы нового поколения</h1>
+          <p style={{ color: '#0785f6', fontWeight: '500' }}>
+            У вас есть идея, и вы хотите превратить её в бизнес? Я помогу вам сделать это грамотно —
+            составить профессиональный бизнес‑план, чтобы убедить инвесторов и получить финансирование.
+          </p>
+          <p>
+            Если вам не нужно вступление и готовы обсудить детали, заказать бизнес‑план или заполнить бриф:
+          </p>
+          <div className="d-flex gap-3">
+            <a href="/contacts" className="btn btn-primary">Контакты</a>
+            <a href="/brif" className="btn btn-outline-primary">Бриф</a>
+          </div>
+          <p className="mt-4" style={{ fontWeight: '500' }}>Ещё интересно? Листаем ниже!</p>
+        </section>
+
+        {/* Блок доверия */}
+        <section className="mb-5">
+          <h2 style={{ color: '#1e6078' }}>Я делаю бизнес‑планы. Почему мне стоит доверять?</h2>
+          <div className="row g-4 mt-3">
+            <div className="col-md-3 col-6">
+              <div className="border rounded p-3 h-100 shadow-sm">
+                <h5>Общая привлечённая сумма финансирования — 2,45 млн $</h5>
+                <p>Опыт работы более 16 лет</p>
+                <a href="#" className="btn btn-link p-0">Подробнее →</a>
+              </div>
+            </div>
+            <div className="col-md-3 col-6">
+              <div className="border rounded p-3 h-100 shadow-sm">
+                <h5>Многолетняя подтверждённая экспертиза</h5>
+                <p>Фактический опыт аналитической работы более 25 лет</p>
+                <a href="#" className="btn btn-link p-0">Подробнее →</a>
+              </div>
+            </div>
+            <div className="col-md-3 col-6">
+              <div className="border rounded p-3 h-100 shadow-sm">
+                <h5>Более 230 бизнес‑планов, сданных заказчикам</h5>
+                <p>Широкий охват отраслей</p>
+                <a href="#" className="btn btn-link p-0">Подробнее →</a>
+              </div>
+            </div>
+            <div className="col-md-3 col-6">
+              <div className="border rounded p-3 h-100 shadow-sm">
+                <h5>Высшее экономическое образование</h5>
+                <p>Экономика и матанализ — наше всё!</p>
+                <a href="#" className="btn btn-link p-0">Подробнее →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Карусель продуктов */}
+        <ProductsCarousel />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer style={{ backgroundColor: '#A8F000', color: '#000' }} className="py-3 mt-5">
+        <div className="container d-flex justify-content-between flex-wrap">
+          <div>© 2025 Up&Grow. Все права защищены.</div>
+          <div>
+            <a href="/policy" className="text-dark me-3">Политика конфиденциальности</a>
+            <a href="/policy" className="text-dark">Пользовательское соглашение</a>
+          </div>
+        </div>
       </footer>
     </div>
   );
