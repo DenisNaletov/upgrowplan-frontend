@@ -104,7 +104,7 @@ export default function ProductsPage() {
                 className="ms-2"
                 style={{ color: '#1e6078', fontWeight: 'bold' }}
               >
-                Up&Grow
+                UpGrowPlan
               </span>
             </a>
             <button
@@ -216,7 +216,7 @@ export default function ProductsPage() {
         className="py-3 mt-5 text-dark"
       >
         <div className="container d-flex justify-content-between flex-wrap align-items-center">
-          <div>© 2025 Up&Grow. Все права защищены.</div>
+          <div>© 2025 UpGrowPlan. Все права защищены.</div>
           <ul className="nav">
             <li className="nav-item">
               <a href="#" className="nav-link px-2 text-dark">

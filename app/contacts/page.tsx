@@ -30,7 +30,7 @@ export default function ContactsPage() {
           <div className="container">
             <a className="navbar-brand d-flex align-items-center" href="/">
               <Image src="/LogoUpGrowSmall2.png" alt="Up&Grow Logo" width={40} height={40} />
-              <span className="ms-2" style={{ color: '#1e6078', fontWeight: 'bold' }}>Up&Grow</span>
+              <span className="ms-2" style={{ color: '#1e6078', fontWeight: 'bold' }}>UpGrowPlan</span>
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span className="navbar-toggler-icon"></span>
@@ -122,7 +122,7 @@ export default function ContactsPage() {
       {/* Footer */}
       <footer style={{ backgroundColor: '#A8F000', color: '#000' }} className="py-3 mt-5">
         <div className="container d-flex justify-content-between flex-wrap">
-          <div>© 2025 Up&Grow. Все права защищены.</div>
+          <div>© 2025 UpGrowPlan. Все права защищены.</div>
           <div>
             <a href="/policy" className="text-dark me-3">Политика конфиденциальности</a>
             <a href="/policy" className="text-dark">Политика обработки данных</a>
