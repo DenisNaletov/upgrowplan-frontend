@@ -11,12 +11,12 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Up&Grow — Бизнес‑планы, Финансовые модели и Аналитика",
   description:
     "Up&Grow — профессиональные бизнес‑планы, финансовые модели и маркетинговые исследования. 16+ лет опыта, более 230 реализованных проектов и 2,45 млн $ привлеченных инвестиций. Помогаем запускать и развивать бизнес грамотно.",
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
 };
 
