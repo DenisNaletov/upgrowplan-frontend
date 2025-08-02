@@ -68,14 +68,14 @@ export default function Home() {
             </div>
             <div className="col-md-3 col-6">
               <div className="border rounded p-3 h-100 shadow-sm">
-                <h5>Более 16 лет бизнес-планирование и анализа данных</h5>
+                <h5>Более 16 лет бизнес-планирования и анализа показателей компаний</h5>
 
                 <a href="#" className="btn btn-link p-0">Подробнее →</a>
               </div>
             </div>
             <div className="col-md-3 col-6">
               <div className="border rounded p-3 h-100 shadow-sm">
-                <h5>Более 230 исполненных бизнес‑планов по всем отраслям</h5>
+                <h5>Более 230 исполненных бизнес‑планов. Полное покрытие видов бизнеса</h5>
                 <a href="#" className="btn btn-link p-0">Подробнее →</a>
               </div>
             </div>
